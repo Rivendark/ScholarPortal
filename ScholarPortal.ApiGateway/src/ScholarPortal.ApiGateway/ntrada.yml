@@ -1,0 +1,107 @@
+auth:
+  enabled: true
+  global: false
+  claims:
+    role: http://schemas.microsoft.com/ws/2008/06/identity/claims/role
+
+http:
+  retries: 2
+  interval: 2.0
+  exponential: true
+
+useErrorHandler: true
+useJaeger: true
+useForwardedHeaders: true
+passQueryString: true
+modulesPath: Modules
+payloadsFolder: Payloads
+forwardRequestHeaders: true
+forwardResponseHeaders: true
+generateRequestId: true
+generateTraceId: true
+resourceId:
+  generate: true
+  property: id
+useLocalUrl: true
+loadBalancer:
+  enabled: false
+  url: localhost:9999
+
+extensions:
+  customErrors:
+    includeExceptionMessage: true
+
+  cors:
+    allowCredentials: true
+    allowedOrigins:
+      - '*'
+    allowedMethods:
+      - put
+      - post
+      - delete
+    allowedHeaders:
+      - '*'
+    exposedHeaders:
+      - Request-ID
+      - Resource-ID
+      - Trace-ID
+      - Total-Count
+
+  jwt:
+    key: fnKSTno6z9MJ9xUFHDZDmhUoGuI4zwi3lZfZbBATA3GfQWrUahsa5UV0nNMCmV2F5MArPm2Kil_m5oaw0sTd6Q
+    validIssuer: scholar-portal
+    validateAudience: false
+    validateIssuer: true
+    validateLifetime: true
+    
+  swagger:
+    name: Scholar Portal
+    reDocEnabled: false
+    title: Scholar Portal API
+    version: v1
+    routePrefix: docs
+    includeSecurity: true
+
+  rabbitmq:
+    enabled: true
+    connectionName: api-gateway
+    hostnames:
+      - rabbitmq
+    port: 5672
+    virtualHost: /
+    username: guest
+    password: guest
+    requestedConnectionTimeout: 3000
+    socketReadTimeout: 3000
+    socketWriteTimeout: 3000
+    requestedHeartbeat: 60
+    exchange:
+      declareExchange: true
+      durable: true
+      autoDelete: false
+      type: topic
+    messageContext:
+      enabled: true
+      header: message_context
+    logger:
+      enabled: true
+    spanContextHeader: span_context
+
+  tracing:
+    serviceName: api-gateway
+    udpHost: localhost
+    udpPort: 6831
+    maxPacketSize: 0
+    sampler: const
+    useEmptyTracer: false
+    excludePaths:
+      - /ping
+      - /metrics
+
+modules:
+  home:
+    routes:
+      - upstream: /
+        method: GET
+        use: return_value
+        returnValue: Welcome to Scholar Portal API -2

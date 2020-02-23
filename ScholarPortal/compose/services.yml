@@ -1,0 +1,36 @@
+version: "3.5"
+
+services:
+  api-gateway:
+    build: ./../../ScholarPortal.ApiGateway
+    container_name: api-gateway
+    restart: unless-stopped
+    environment:
+      - NTRADA_CONFIG=ntrada-async.docker.yml
+    ports:
+      - 5000:80
+    networks:
+      - sportal
+
+  employees-service:
+    build: ./../../ScholarPortal.Services.Employees
+    container_name: employees-service
+    restart: unless-stopped
+    ports:
+      - 5001:80
+    networks:
+      - sportal
+        
+  identity-service:
+    build: ./../../ScholarPortal.Services.Identity
+    container_name: identity-service
+    restart: unless-stopped
+    ports:
+      - 5002:80
+    networks:
+      - sportal
+
+networks:
+  sportal:
+    name: scholar-portal-network
+    external: true

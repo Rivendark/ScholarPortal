@@ -1,0 +1,50 @@
+version: "3.5"
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: unless-stopped
+    environment:
+      PWD: admin
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    networks:
+      - sportal
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo:/data/db
+        
+  postgres:
+    image: postgres
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: admin
+    ports:
+      - 5432:5432
+    networks:
+      - sportal
+    volumes:
+      - postgres:/data/db
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - sportal
+    volumes:
+      - rabbitmq:/var/lib/rabbitmq
+
+networks:
+  sportal:
+    name: scholar-portal-network
+
+volumes:
+  mongo:
+  postgres:
+  rabbitmq:
