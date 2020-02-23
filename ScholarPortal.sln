@@ -30,6 +30,9 @@ ProjectSection(SolutionItems) = preProject
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{E2D351E3-E0F5-4CC4-BAF1-5BBDEDE011C9}"
+ProjectSection(SolutionItems) = preProject
+	ScholarPortal\scripts\.gitkeep = ScholarPortal\scripts\.gitkeep
+EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "host-prometheus", "host-prometheus", "{28497878-4D21-40D0-BA1A-912081BD0D6B}"
 ProjectSection(SolutionItems) = preProject
