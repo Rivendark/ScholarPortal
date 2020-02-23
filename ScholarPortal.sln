@@ -13,6 +13,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AEBE6BC1-C1D7-4626-A761-2355E4E22566}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScholarPortal.ApiGateway", "ScholarPortal.ApiGateway", "{A6D5B0D4-7A6C-4ADA-B73E-AE2FC3ABF8A7}"
+ProjectSection(SolutionItems) = preProject
+	ScholarPortal.ApiGateway\Dockerfile = ScholarPortal.ApiGateway\Dockerfile
+	ScholarPortal.ApiGateway\.dockerignore = ScholarPortal.ApiGateway\.dockerignore
+EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{46CF32E2-BC42-4A4B-8677-BBACCEC396F7}"
 EndProject
