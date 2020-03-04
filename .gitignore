@@ -22,7 +22,8 @@ x64/
 #!**/packages/repositories.config
 
 ScholarPortal.Services.*
-ScholarPortal.ApiGateway.*
+ScholarPortal.ApiGateway
+ScholarPortal.Protos
 
 # MSTest test Results
 [Tt]est[Rr]esult*/

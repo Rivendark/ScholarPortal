@@ -1,12 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScholarPortal.Services.Employees", "ScholarPortal.Services.Employees", "{0C3CC9DF-FF77-4453-B3B0-83B06EE5EB00}"
+ProjectSection(SolutionItems) = preProject
+	ScholarPortal.Services.Employees\Dockerfile = ScholarPortal.Services.Employees\Dockerfile
+EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{8477301A-A057-4D3A-9B38-5DE879DB3AD9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{07D52E84-5CF2-43D9-A6C6-B778E8ACFB0D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScholarPortal.Services.Identity", "ScholarPortal.Services.Identity", "{9196500A-7E61-4AA1-8301-199F54CF93D5}"
+ProjectSection(SolutionItems) = preProject
+	ScholarPortal.Services.Identity\Dockerfile = ScholarPortal.Services.Identity\Dockerfile
+EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{85763BBC-842F-4D6A-9902-F6399EBB7AEC}"
 EndProject
@@ -74,6 +80,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScholarPortal.Services.Iden
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScholarPortal.Services.Identity.Infrastructure", "ScholarPortal.Services.Identity\src\ScholarPortal.Services.Identity.Infrastructure\ScholarPortal.Services.Identity.Infrastructure.csproj", "{5E303820-B793-4389-9FC9-3B1AB709C994}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScholarPortal.Protos", "ScholarPortal.Protos", "{ED87C912-0C28-4ABD-8BAA-24763D352867}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{CB8CE5CA-94DF-47AB-B850-D1EEE7733699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScholarPortal.Protos", "ScholarPortal.Protos\src\ScholarPortal.Protos\ScholarPortal.Protos.csproj", "{83789000-B085-4524-B0E7-0D4950A979AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,6 +112,8 @@ Global
 		{24C8D1D1-7257-4F89-91DC-735C46B4A30D} = {85763BBC-842F-4D6A-9902-F6399EBB7AEC}
 		{8C73C68A-36FE-4243-A892-D87048128118} = {85763BBC-842F-4D6A-9902-F6399EBB7AEC}
 		{5E303820-B793-4389-9FC9-3B1AB709C994} = {85763BBC-842F-4D6A-9902-F6399EBB7AEC}
+		{CB8CE5CA-94DF-47AB-B850-D1EEE7733699} = {ED87C912-0C28-4ABD-8BAA-24763D352867}
+		{83789000-B085-4524-B0E7-0D4950A979AD} = {CB8CE5CA-94DF-47AB-B850-D1EEE7733699}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B3AFC9D1-EF2C-41C7-9A8F-FA0609EB001E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -138,5 +152,9 @@ Global
 		{5E303820-B793-4389-9FC9-3B1AB709C994}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E303820-B793-4389-9FC9-3B1AB709C994}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E303820-B793-4389-9FC9-3B1AB709C994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83789000-B085-4524-B0E7-0D4950A979AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83789000-B085-4524-B0E7-0D4950A979AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83789000-B085-4524-B0E7-0D4950A979AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83789000-B085-4524-B0E7-0D4950A979AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
